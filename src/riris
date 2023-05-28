@@ -1,5 +1,5 @@
-#!/usr/bin/python
-# install python 3.7
+#!/usr/bin/env python
+# install python 3
 # pip install irisnative-1.0.0-cp34.cp35.cp36.cp37-none-win_amd64.whl
 
 # TODO: randomize filename and routines name (cod e sql)
