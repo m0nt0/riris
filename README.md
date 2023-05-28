@@ -9,7 +9,7 @@ You need to have python 3 installed and also the irisnative module
 After that there's no need of installing the application, it's just a single py file
 
 # Help
-`
+```
 usage: riris [-H] [-h host] [-s port] [-n namespace] [-u user] [-p password] [-v]
              {cls,rtn,set,get,kil,cod,sql} ...
 
@@ -106,4 +106,4 @@ specific options:
       ./riris -h iris-server -p SYS sql -U root -P trakcare select \* from Config.confg
       where test_sql contains:
         select \* from Config.confg
-`
+```
