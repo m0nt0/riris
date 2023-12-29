@@ -1,0 +1,35 @@
+;do $System.OBJ.LoadDir("/opt/irisapp/src","ck",,1)
+
+zn "%SYS"
+;Do ##class(Security.Users).UnExpireUserPasswords("*")
+
+Set db=##Class(SYS.Database).%OpenId("irislib")
+set db.ReadOnly=0
+write !,"set ReadOnly=0 "
+write db.%Save()
+
+;zpm "install zpm"
+;zpm "load https://github.com/intersystems/ipm.git"
+;zpm "load https://github.com/SergeyMi37/zapm.git"
+
+zn "USER"
+;zpm "install webterminal"
+zpm "load https://github.com/intersystems-community/webterminal.git"
+
+zn "%sys"
+if $zf(-1,"echo '://zapm ""newdb https://github.com/SergeyMi37/apptools-infochest.git""' >> ~/.iris_history")
+if $zf(-1,"echo '://zapm ""newdb https://github.com/SergeyMi37/apptools-admin.git""' >> ~/.iris_history")
+if $zf(-1,"echo '://zapm ""newdb https://github.com/intersystems-community/webterminal.git"" //create a new namespace and install it into it - webterminal' >> ~/.iris_history")
+if $zf(-1,"echo '://zapm ""newdb https://github.com/SeanConnelly/DevBox.git"" //create a new namespace and install it into it web editor objectscript - replacement for сstudio ' >> ~/.iris_history")
+if $zf(-1,"echo '://zapm ""newdb https://github.com/rcemper/oex-mapping.git"" //create a new namespace and install it into it - collect OEX structure data' >> ~/.iris_history")
+if $zf(-1,"echo '://zapm ""newdb https://github.com/intersystems-community/isc-dev.git"" //create a new namespace and install it into it - Export/Import InterSystems Data Platform development artefacts' >> ~/.iris_history")
+if $zf(-1,"echo '://zapm ""newdb https://github.com/evshvarov/csvgen.git"" //create a new namespace and install it into it module to generate and import csv data using InterSystems ObjectScript' >> ~/.iris_history")
+if $zf(-1,"echo ':zapm ""zna"" //view all namespace and modules in them' >> ~/.iris_history")
+if $zf(-1,"echo ':zapm ""pick -a"" //see all projects in OEX and installation from repo' >> ~/.iris_history")
+if $zf(-1,"echo ':zn ""%SYS"" zpm ""load https://github.com/SergeyMi37/zapm.git""' >> ~/.iris_history")
+if $zf(-1,"echo ':!tail /usr/irissys/mgr/messages.log' >> ~/.iris_history")
+
+zpm "load /opt/irisapp/ -v":1
+zpm "load https://github.com/SergeyMi37/isc-passwordless.git"
+
+halt

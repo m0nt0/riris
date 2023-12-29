@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+<Document name="riris.ZPM">
+<Module>
+ <Name>riris</Name>
+  <Version>0.0.1</Version>
+  <Description>Remote InterSystems IRIS command execution</Description>
+  <Keywords>Remote</Keywords>
+  <Packaging>module</Packaging>
+  <FileCopy Name="src/" Target="${libdir}${packagename}/"/>
+ <AfterInstallMessage>
+&#13; The project is installed. Go to directory
+&#13;    cd ${libdir}${packagename}
+&#13;    wget --continue https://github.com/intersystems-community/iris-driver-distribution/raw/main/DB-API/intersystems_irispython-3.2.0-py3-none-any.whl 
+&#13;    pip3 install intersystems_irispython-3.2.0-py3-none-any.whl
+&#13; run the programm
+&#13;   python3 riris -h iris -s 51663 -n USER -u superuser -p SYS
+</AfterInstallMessage>
+</Module>
+</Document>
+</Export>
