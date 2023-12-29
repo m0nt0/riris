@@ -14,7 +14,7 @@
 &#13;    wget --continue https://github.com/intersystems-community/iris-driver-distribution/raw/main/DB-API/intersystems_irispython-3.2.0-py3-none-any.whl 
 &#13;    pip3 install intersystems_irispython-3.2.0-py3-none-any.whl
 &#13; run the programm
-&#13;   python3 riris -h iris -s 51663 -n USER -u superuser -p SYS
+&#13;    ./riris -p SYS cls %Library.Utility Date 5
 </AfterInstallMessage>
 </Module>
 </Document>
