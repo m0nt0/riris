@@ -1,0 +1,9 @@
+zn "%sys"
+
+if $zf(-1,"echo ':!tail /usr/irissys/mgr/messages.log' >> ~/.iris_history")
+if $zf(-1,"echo ':! python3 /usr/irissys/lib/riris/riris -h localhost -p SYS -v -s 1972 cls %Library.Utility Date 5' >> ~/.iris_history")
+if $zf(-1,"echo ':! python3 /usr/irissys/lib/riris/riris --help' >> ~/.iris_history")
+
+zpm "load /opt/irisapp/ -v":1
+
+halt
